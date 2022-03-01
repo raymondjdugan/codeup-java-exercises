@@ -1,4 +1,4 @@
-package ConsoleExercies;
+package console_exercies;
 
 import java.util.Scanner;
 
