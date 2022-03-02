@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ControlFlowExercises {
     public static void main(String[] args) {
-        int i = 5;
+        long i = 5;
         while (i <= 15) {
             System.out.println(i);
             i++;
@@ -25,14 +25,14 @@ public class ControlFlowExercises {
         i = 2;
         do {
             System.out.println(i);
-            i = (int) Math.pow( i,  2);
+            i = (long) Math.pow( i,  2);
         } while (i <= 1_000_000);
 
         for (i = 100; i >= -10; i -=5) {
             System.out.println(i);
         }
 
-        for (i = 2; i <= 1_000_000;  i = (int) Math.pow(i,  2)) {
+        for (i = 2; i <= 1_000_000;  i = (long) Math.pow(i,  2)) {
             System.out.println(i);
         }
 
@@ -47,6 +47,7 @@ public class ControlFlowExercises {
                 System.out.println(j);
             }
         }
+
         Scanner input = new Scanner(System.in);
         boolean active = true;
         while (active) {
@@ -59,9 +60,7 @@ public class ControlFlowExercises {
             System.out.println("______ | _______ | _____");
 
             for (int j = 1; j <= userNum; j++) {
-                int numSquared = (int) Math.pow(j, 2);
-                int numCubed = (int) Math.pow(j, 3);
-                System.out.printf("%-7s| %-8s| %s%n", j, numSquared, numCubed);
+                System.out.printf("%-7s| %-8s| %s%n", j, (int) Math.pow(j, 2), (int) Math.pow(j, 3));
             }
             System.out.println("Do you want to continue y or n");
             String userContinue = input.next();
