@@ -96,7 +96,6 @@ public class MethodsExercises {
 
         //TODO 3: Implementation
         int factorialInput = getInteger(1, 20);
-        System.out.println(factorialInput);
         long factorialOutput = calculateFactorial(factorialInput);
         System.out.printf("The factorial for %d is %d%n", factorialInput, factorialOutput);
 
