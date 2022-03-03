@@ -8,7 +8,7 @@ public class Bob {
         boolean activeConversation = true;
         while (activeConversation) {
             System.out.println("Bob says: \"What's up\"");
-            String userInput = input.nextLine();
+            String userInput = input.nextLine().trim();
             if (userInput.endsWith("?")) {
                 System.out.println("Sure");
             } else if (userInput.endsWith("!")) {

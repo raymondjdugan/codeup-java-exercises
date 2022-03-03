@@ -60,7 +60,7 @@ public class ControlFlowExercises {
             System.out.println("______ | _______ | _____");
 
             for (int j = 1; j <= userNum; j++) {
-                System.out.printf("%-7s| %-8s| %s%n", j, (int) Math.pow(j, 2), (int) Math.pow(j, 3));
+                System.out.printf("%-7d| %-8d| %d%n", j, (int) Math.pow(j, 2), (int) Math.pow(j, 3));
             }
             System.out.println("Do you want to continue y or n");
             String userContinue = input.next();
