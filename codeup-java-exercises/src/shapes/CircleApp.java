@@ -6,7 +6,6 @@ public class CircleApp {
     static Input in = new Input();
     public static void circleCreator(){
         int numOfCircles = 0;
-        boolean creatingCircles = true;
         do {
             Circle circle = new Circle(in.getInt("PLease enter the radius of the circle."));
             numOfCircles++;

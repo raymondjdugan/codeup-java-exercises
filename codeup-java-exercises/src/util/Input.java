@@ -3,45 +3,45 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    private static final Scanner input = new Scanner(System.in);
+    private final Scanner input = new Scanner(System.in);
 
-    public static String getString() {
+    public String getString() {
         return input.nextLine();
     }
-    public static String getString(String prompt) {
+    public String getString(String prompt) {
         System.out.println(prompt);
         return input.nextLine();
     }
 
-    public static String getNextString() {
+    public String getNextString() {
         return input.next();
     }
-    public static String getNextString(String prompt) {
+    public String getNextString(String prompt) {
         System.out.println(prompt);
         return input.next();
     }
 
-    public static boolean yesNo(){
+    public boolean yesNo(){
         String userInput = input.next();
         return userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes");
     }
 
-    public static boolean yesNo(String prompt){
+    public boolean yesNo(String prompt){
         System.out.println(prompt);
         String userInput = input.next();
         return userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes");
     }
 
-    public static int getInt(){
+    public int getInt(){
         return input.nextInt();
     }
 
-    public static int getInt(String prompt){
+    public int getInt(String prompt){
         System.out.println(prompt);
         return input.nextInt();
     }
 
-    public static int getInt(int min, int max){
+    public int getInt(int min, int max){
         int userInput = input.nextInt();
         if (userInput < min || userInput > max) {
             System.out.printf("%d is not a valid number between %d and %d%n", userInput, min, max);
@@ -50,7 +50,7 @@ public class Input {
         return userInput;
     }
 
-    public static int getInt(int min, int max, String prompt){
+    public int getInt(int min, int max, String prompt){
         System.out.println(prompt);
         int userInput = input.nextInt();
         if (userInput < min || userInput > max) {
@@ -60,16 +60,16 @@ public class Input {
         return userInput;
     }
 
-    public static double getDouble() {
+    public double getDouble() {
         return input.nextDouble();
     }
 
-    public static double getDouble(String prompt) {
+    public double getDouble(String prompt) {
         System.out.println(prompt);
         return input.nextDouble();
     }
 
-    public static double getDouble(double min, double max) {
+    public double getDouble(double min, double max) {
         double userInput = input.nextDouble();
         if (userInput < min || userInput > max) {
             System.out.printf("%.1f is not a valid number between %.1f and %.1f%n", userInput, min, max);
@@ -78,7 +78,7 @@ public class Input {
         return userInput;
     }
 
-    public static double getDouble(double min, double max, String prompt) {
+    public double getDouble(double min, double max, String prompt) {
         System.out.println(prompt);
         double userInput = input.nextDouble();
         if (userInput < min || userInput > max) {
