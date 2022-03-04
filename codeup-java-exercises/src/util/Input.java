@@ -22,13 +22,13 @@ public class Input {
     }
 
     public static boolean yesNo(){
-        String userInput = input.nextLine();
+        String userInput = input.next();
         return userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes");
     }
 
     public static boolean yesNo(String prompt){
         System.out.println(prompt);
-        String userInput = input.nextLine();
+        String userInput = input.next();
         return userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes");
     }
 
