@@ -13,6 +13,14 @@ public class Input {
         return input.nextLine();
     }
 
+    public static String getNextString() {
+        return input.next();
+    }
+    public static String getNextString(String prompt) {
+        System.out.println(prompt);
+        return input.next();
+    }
+
     public static boolean yesNo(){
         String userInput = input.nextLine();
         return userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes");
