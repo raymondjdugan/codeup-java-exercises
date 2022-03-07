@@ -8,7 +8,7 @@ public class Person {
     }
 
     public String getName(){
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
@@ -22,18 +22,18 @@ public class Person {
     public static void main(String[] args) {
         Person Raymond = new Person("Raymond");
         System.out.println(Raymond.getName());
-        Raymond.setName("Raymond");
+        Raymond.setName("Ray");
         System.out.println(Raymond.getName());
         Raymond.sayHello();
 
-/*        Person person1 = new Person("John");
+       /* Person person1 = new Person("John");
         Person person2 = new Person("John");
         System.out.println(person1.getName().equals(person2.getName()));
-        System.out.println(person1 == person2);*/
+        System.out.println(person1 == person2);
 
-/*        Person person1 = new Person("John");
+        Person person1 = new Person("John");
         Person person2 = person1;
-        System.out.println(person1 == person2);*/
+        System.out.println(person1 == person2);
 
         Person person1 = new Person("John");
         Person person2 = person1;
@@ -41,6 +41,6 @@ public class Person {
         System.out.println(person2.getName());
         person2.setName("Jane");
         System.out.println(person1.getName());
-        System.out.println(person2.getName());
+        System.out.println(person2.getName());*/
     }
 }

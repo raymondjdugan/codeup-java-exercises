@@ -3,46 +3,52 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    private final Scanner input = new Scanner(System.in);
+    private final Scanner scanner;
+
+    public Input() {
+        this.scanner = new Scanner(System.in);
+    }
 
     public String getString() {
-        return input.nextLine();
+        return scanner.nextLine();
     }
+
     public String getString(String prompt) {
         System.out.println(prompt);
-        return input.nextLine();
+        return scanner.nextLine();
     }
 
     public String getNextString() {
-        return input.next();
+        return scanner.next();
     }
+
     public String getNextString(String prompt) {
         System.out.println(prompt);
-        return input.next();
+        return scanner.next();
     }
 
-    public boolean yesNo(){
-        String userInput = input.next();
+    public boolean yesNo() {
+        String userInput = scanner.next();
         return userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes");
     }
 
-    public boolean yesNo(String prompt){
+    public boolean yesNo(String prompt) {
         System.out.println(prompt);
-        String userInput = input.next();
+        String userInput = scanner.next();
         return userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes");
     }
 
-    public int getInt(){
-        return input.nextInt();
+    public int getInt() {
+        return scanner.nextInt();
     }
 
-    public int getInt(String prompt){
+    public int getInt(String prompt) {
         System.out.println(prompt);
-        return input.nextInt();
+        return scanner.nextInt();
     }
 
-    public int getInt(int min, int max){
-        int userInput = input.nextInt();
+    public int getInt(int min, int max) {
+        int userInput = scanner.nextInt();
         if (userInput < min || userInput > max) {
             System.out.printf("%d is not a valid number between %d and %d%n", userInput, min, max);
             return getInt(min, max);
@@ -50,9 +56,9 @@ public class Input {
         return userInput;
     }
 
-    public int getInt(int min, int max, String prompt){
+    public int getInt(int min, int max, String prompt) {
         System.out.println(prompt);
-        int userInput = input.nextInt();
+        int userInput = scanner.nextInt();
         if (userInput < min || userInput > max) {
             System.out.printf("%d is not a valid number between %d and %d%n", userInput, min, max);
             return getInt(min, max, prompt);
@@ -61,16 +67,16 @@ public class Input {
     }
 
     public double getDouble() {
-        return input.nextDouble();
+        return scanner.nextDouble();
     }
 
     public double getDouble(String prompt) {
         System.out.println(prompt);
-        return input.nextDouble();
+        return scanner.nextDouble();
     }
 
     public double getDouble(double min, double max) {
-        double userInput = input.nextDouble();
+        double userInput = scanner.nextDouble();
         if (userInput < min || userInput > max) {
             System.out.printf("%.1f is not a valid number between %.1f and %.1f%n", userInput, min, max);
             return getDouble(min, max);
@@ -80,15 +86,13 @@ public class Input {
 
     public double getDouble(double min, double max, String prompt) {
         System.out.println(prompt);
-        double userInput = input.nextDouble();
+        double userInput = scanner.nextDouble();
         if (userInput < min || userInput > max) {
             System.out.printf("%.1f is not a valid number between %.1f and %.1f%n", userInput, min, max);
             return getDouble(min, max, prompt);
         }
         return userInput;
     }
-
-
 
 
 }
