@@ -6,9 +6,8 @@ import java.util.Arrays;
 
 public class ArraysExercises {
     public static Person[] addPerson(Person[] people, Person person) {
-        Person[] newPeople = new Person[people.length + 1];
-        System.arraycopy(people, 0, newPeople, 0, people.length);
-        newPeople[3] = person;
+        Person[] newPeople = Arrays.copyOf(people, people.length+1);
+        newPeople[newPeople.length-1] = person;
         return newPeople;
     }
 
