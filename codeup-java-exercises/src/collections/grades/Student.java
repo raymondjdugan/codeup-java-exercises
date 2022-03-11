@@ -15,6 +15,12 @@ public class Student {
         grades.add(grade);
     }
 
+    public void addMultipleGrades(int [] grades)  {
+        for (int grade : grades) {
+            this.grades.add(grade);
+        }
+    }
+
     public void deleteLastGrade(){
         grades.remove(grades.size() - 1);
     }

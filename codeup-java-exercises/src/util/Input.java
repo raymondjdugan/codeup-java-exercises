@@ -39,6 +39,7 @@ public class Input {
     public int getInt(int min, int max, String prompt) {
         System.out.println(prompt);
         int userInput = scanner.nextInt();
+        scanner.nextLine();
         if (userInput < min || userInput > max) {
             System.out.printf("%d is not a valid number between %d and %d%n", userInput, min, max);
             return getInt(min, max, prompt);
@@ -60,6 +61,7 @@ public class Input {
     public double getDouble(double min, double max, String prompt) {
         System.out.println(prompt);
         double userInput = scanner.nextDouble();
+        scanner.nextLine();
         if (userInput < min || userInput > max) {
             System.out.printf("%.1f is not a valid number between %.1f and %.1f%n", userInput, min, max);
             return getDouble(min, max, prompt);
