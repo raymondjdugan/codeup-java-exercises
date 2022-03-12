@@ -2,28 +2,21 @@ package collections.grocery_list;
 
 import util.Input;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class GroceryApp {
     private static final Input input = new Input();
+    private static ArrayList<Map<String, Integer>> groceryList = new ArrayList<>
+            (Arrays.asList(new HashMap<>(), new HashMap<>(), new HashMap<>(), new HashMap<>(), new HashMap<>(),
+                    new HashMap<>(), new HashMap<>(), new HashMap<>()));
 
     public static void main(String[] args) {
-        HashMap<String, Integer> produce, fruit, meat, dairy, bread, snacks, frozen, baking;
-        produce = new HashMap<>();
-        fruit = new HashMap<>();
-        meat = new HashMap<>();
-        dairy = new HashMap<>();
-        bread = new HashMap<>();
-        snacks = new HashMap<>();
-        frozen = new HashMap<>();
-        baking = new HashMap<>();
-        ArrayList<Map<String, Integer>> groceryList = new ArrayList<>(Arrays.asList(produce, fruit, meat, dairy, bread, snacks, frozen, baking));
-
-        while (input.yesNo("Would you like to create a grocery list? (y/n)")) {
+        while (input.yesNo("Would you like to add an item grocery list? (y/n)")) {
             displayCategories();
+
+            int category = input.getInt(1, 8, "Enter a number from above");
+
+
         }
     }
 
@@ -39,12 +32,16 @@ public class GroceryApp {
                 "8. Baking\n");
     }
 
-    private static Map<String, Integer> createItem(String category) {
+    private static void createItem(String category) {
         String itemName = input.getString("Enter the name of the item.");
         int itemQuantity = input.getInt("Enter the quantity for " + itemName + "(s)");
 
         HashMap<String, Integer> item = new HashMap<>();
         item.put(itemName, itemQuantity);
-        return item;
+        addItemToList(item);
+    }
+
+    private static void addItemToList(HashMap<String, Integer> item) {
+
     }
 }
