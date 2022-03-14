@@ -6,9 +6,12 @@ public class Student {
     private String name;
     private ArrayList<Integer> grades;
 
+    public Student() {
+        grades = new ArrayList<>();
+    }
     public Student(String name) {
+        this();
         this.name = name;
-        this.grades = new ArrayList<>();
     }
 
     public void addGrade(int grade) {
